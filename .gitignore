@@ -1,0 +1,4 @@
+dataset/
+training dataset/
+__pycache__/
+*.pyc
