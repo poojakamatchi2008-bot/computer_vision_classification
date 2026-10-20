@@ -1,4 +1,6 @@
-dataset/
 training dataset/
+dataset/
 __pycache__/
+.venv/
+venv/
 *.pyc

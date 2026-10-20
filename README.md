@@ -1,134 +1,64 @@
-# Rock Paper Scissors - Computer Vision Classification
+# Rock Paper Scissors Image Classification using CNN
 
 ## Project Overview
+This project uses a Convolutional Neural Network (CNN) built with PyTorch to classify hand gesture images into three categories: **Rock, Paper, and Scissors**. A Streamlit web application allows users to upload an image and get a prediction.
 
-This project is a Computer Vision classification system that identifies images as:
-
-- Paper
-- Rock
-- Scissors
-
-The project uses image preprocessing, feature extraction and an SVM (Support Vector Machine) classifier to classify the images.
-
-## Dataset
-
-The Rock Paper Scissors dataset contains:
-
-- Training images: 2520
-- Testing images: 372
-- Number of classes: 3
-
-### Classes
-
-1. Paper
-2. Rock
-3. Scissors
+## Features
+- Image classification using a CNN model.
+- Image preprocessing using Pillow (PIL) and NumPy.
+- Grayscale conversion and resizing to 64 × 64 pixels.
+- Model training and evaluation.
+- Image upload and prediction through a Streamlit interface.
 
 ## Technologies Used
+- **Python** – Programming language
+- **PyTorch** – CNN model development and prediction
+- **Pillow (PIL)** – Image processing
+- **NumPy** – Array operations and numerical processing
+- **Matplotlib** – Visualization
+- **Scikit-learn** – Model evaluation metrics
+- **Streamlit** – Web application interface
 
-- Python
-- OpenCV
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-
-## Methodology
-
-The project follows these steps:
-
-1. Load the training and testing images.
-2. Resize the images to 64 × 64 pixels.
-3. Convert images to grayscale.
-4. Normalize pixel values.
-5. Convert images into feature vectors.
-6. Train an SVM classifier.
-7. Predict the classes of test images.
-8. Evaluate the model using accuracy and classification metrics.
-9. Visualize the confusion matrix.
-10. Perform single-image prediction.
-
-## Machine Learning Model
-
-### Support Vector Machine (SVM)
-
-SVM is used as the classification algorithm.
-
-The model uses:
-
-- Kernel: RBF
-- C: 10
-- Gamma: Scale
-
-## Model Evaluation
-
-The model achieved an overall accuracy of:
-
-**67.47%**
-
-### Classification Report
-
-| Class | Precision | Recall | F1-Score |
-|------|-----------|--------|----------|
-| Paper | 0.55 | 0.69 | 0.61 |
-| Rock | 0.95 | 0.60 | 0.73 |
-| Scissors | 0.66 | 0.73 | 0.69 |
-
-## Visualizations
-
-The project includes:
-
-- Sample training image visualization
-- Confusion matrix
-- Actual vs Predicted image visualization
-
-## Single Image Prediction
-
-The trained model can also predict the class of an individual image.
-
-Example:
-
+## Project Structure
 ```text
-Input Image
-     ↓
-Preprocessing
-     ↓
-Feature Extraction
-     ↓
-SVM Model
-     ↓
-Predicted Class
+Computer_Vision_Classification/
+├── app.py
+├── cnn_classify.py
+├── rps_cnn_model.pth
+├── README.md
+└── .gitignore
+```
 
-Example Prediction:
-   Predicted Class: rock
+## How to Run the Project
 
-Project structure:
-   Computer_Vision_Classification/
-│
-├── dataset/
-│   └── testing dataset/
-│       └── rps-test-set/
-│
-├── training dataset/
-│   └── rps/
-│
-├── rps_classification.py
-│
-└── README.md
+### 1. Install the required libraries
+```bash
+pip install torch streamlit pillow numpy matplotlib scikit-learn
+```
 
-Result
+### 2. Run the Streamlit application
+```bash
+streamlit run app.py
+```
 
-The Computer Vision classification model successfully classifies Rock, Paper and Scissors images with an accuracy of 67.47%.
+### 3. Make a Prediction
+- Open the local URL displayed in the terminal.
+- Upload a Rock, Paper, or Scissors image.
+- View the predicted class.
 
-Future Improvements
+## Model
+The project uses a CNN trained to classify images into three classes:
+- Rock
+- Paper
+- Scissors
 
-The model performance can be improved using:
+The trained model is saved as `rps_cnn_model.pth`.
 
-Data augmentation
-Better feature extraction techniques
-CNN-based image classification
-Hyperparameter tuning
-Image preprocessing improvements
-Conclusion
+## Learning Outcomes
+- Understanding CNN-based image classification.
+- Learning image preprocessing techniques.
+- Training and evaluating a deep learning model.
+- Building an interactive application using Streamlit.
 
-This project demonstrates a complete Computer Vision classification pipeline using OpenCV and SVM. It covers image loading, preprocessing, feature extraction, model training, prediction and evaluation.
+## Author
+**Pooja P**
